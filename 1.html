@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>System Recovery</title>
+<style>
+body{
+    margin:0;
+    background:#000;
+    color:#00ff41;
+    font-family:Consolas, monospace;
+    overflow:auto;
+}
+#terminal{
+    padding:20px;
+    white-space:pre-wrap;
+    font-size:18px;
+    line-height:1.6;
+}
+#message{
+    display:none;
+    text-align:center;
+    padding:30px;
+    max-width:none;
+    overflow:visible;
+    margin:auto;
+    color:white;
+}
+h1{
+    color:#ff4d6d;
+}
+button{
+    background:#ff4d6d;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:10px;
+    font-size:18px;
+    cursor:pointer;
+    margin-top:20px;
+}
+button:hover{
+    transform:scale(1.05);
+}
+#final{
+    display:none;
+    margin-top:30px;
+    color:#ff4d6d;
+    font-size:24px;
+}
+.heart{
+    animation:beat 1s infinite;
+    display:inline-block;
+}
+@keyframes beat{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.2);}
+    100%{transform:scale(1);}
+}
+</style>
+</head>
+<body>
+<div id="terminal"></div>
+<div id="message">
+<h1>❤️ ACCESS GRANTED ❤️</h1>
+<pre style="color:#00ff41;text-align:left;display:inline-block;font-size:16px;">
+Scanning Heart.exe...
+████████████████ 100%
+Searching for the most precious person...
+FOUND: HIMAKSHI ❤️
+Analyzing her value...
+ERROR: Value exceeds all measurable limits ♾️
+Checking relationship status...
+WARNING: She is upset because of my mistakes.
+Attempting repair...
+</pre>
+<p style="font-size:20px;">
+Dear Himakshi ❤️,
+<br><br>
+I am really really sorry for all the mistakes I have ever made.
+I know I haven't always been perfect and I know I have hurt you many times.
+dekh mai soryyy mang rea plz krde na maaf eve ni krde hunde bugge plzzz plzz
+<br><br>
+You are one of the most beautiful person in my life, babu.
+Your smile, your care, your love, your way of talking teria adava sb 
+plz maff krdo jnbbbb
+<br><br>
+Today, I don't want to make excuses.
+I just want to take responsibility and tell you that I am truly sorry.
+<br><br>
+Loading my feelings...
+████████████████ 100%
+<br>
+Result: I Love You ❤️
+<br><br>
+Loading my regret...
+████████████████ 100%
+<br>
+Result: I Wish I Hadn't Hurt You 💔
+<br><br>
+Loading my request...
+████████████████ 100%
+<br>
+Result: Please Forgive Me, Babu 🥺❤️
+<br><br>
+Final Status:
+<br>
+No matter how many bugs exist in my life,
+losing you is the one error I never want to face.
+</p>
+<button onclick="forgive()">
+Click To Accept My Apology ❤️
+</button>
+<div id="final">
+<span class="heart">❤️</span>
+<br><br>
+Thank You Himakshi.
+<br>
+You Just Made My World Brighter.
+<br><br>
+I Love You Forever ❤️
+</div>
+</div>
+<script>
+const lines = [
+"Initializing RelationshipOS v2.0...",
+"Loading Memories...",
+"Accessing Heart Database...",
+"Checking Happiness Status...",
+"ERROR: Himakshi Is Upset",
+"Searching For Cause...",
+"Cause Found: My Mistakes",
+"Compiling Apology.exe",
+"Injecting Love Package...",
+"Restoring Smile...",
+"Please Wait...",
+"Authentication Successful",
+"Opening Secret Message..."
+];
+let i = 0;
+const terminal = document.getElementById("terminal");
+function typeLine(){
+    if(i < lines.length){
+        terminal.innerHTML += lines[i] + "\n";
+        i++;
+        setTimeout(typeLine, 900);
+    }else{
+        setTimeout(()=>{
+            terminal.style.display="none";
+            document.getElementById("message").style.display="block";
+        },1500);
+    }
+}
+function forgive(){
+    document.getElementById("final").style.display="block";
+}
+typeLine();
+</script>
+</body>
+</
